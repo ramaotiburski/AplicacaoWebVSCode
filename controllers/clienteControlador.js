@@ -144,7 +144,7 @@ clienteControlador.montarReqEdicao = function (req, res) {
             },
             proxy:{
                 host: "213.12.31.121",
-                port: 8081
+                port: 80
             }
         }
     ).then(function () {
@@ -159,7 +159,7 @@ clienteControlador.montarReqDelete = function (req, res) {
     axios.delete('/' + req.params.id,{
         proxy:{
             host: "213.12.31.121",
-            port: 8081
+            port: 80
         }
     }).then(function () {
             res.status(200).redirect("/");
