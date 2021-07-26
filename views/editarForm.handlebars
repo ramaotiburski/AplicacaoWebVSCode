@@ -1,0 +1,26 @@
+<h2>Editando Cliente com ID {{idcliente}}</h2>
+<form action="/editar/{{idcliente}}" method="POST">
+<div class="mb-3">
+    <label class="form-label">Nome</label>
+    <input class="form-control" type="text" name="nome">
+</div>
+<div class="mb-3">
+    <label class="form-label">CPF</label>
+    <input class="form-control" type="text" name="cpf">
+</div>
+<div class="mb-3">
+    <label class="form-label">Email</label>
+    <input class="form-control" type="email" name="email">
+</div>
+<div class="mb-3">
+    <label class="form-label">Cidade</label>
+    <select class="form-control" name="idcidade">
+        {{#each cidade}}
+        <option value="{{idcidade}}">{{nome_cidade}}</option>
+        {{/each}}
+    </select>
+</div>
+    
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>
+{{>rodape}}
