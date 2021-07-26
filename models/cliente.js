@@ -33,7 +33,7 @@ cliente.belongsTo(cidade,{
     foreignKey: "idcidade"
 })
 
-//cliente.sync()
+cliente.sync()
 
 module.exports = cliente
 
